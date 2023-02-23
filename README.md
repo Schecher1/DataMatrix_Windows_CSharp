@@ -8,9 +8,11 @@ It's not as developed as much as his yet. But let's see how far I get.
 
 ## Features:
 
-✔️ empty<br/>
+✔️ You can create a DataMatrix where the content is a string (DataMatrix grows dynamically, but don't know when it stops)<br/>
+✔️ You can read your generated DataMatrix. (Currently supports only those from this program)<br/>
 
 # CHANGELOG
 
 ## 1.0.0.0
-- empty
+- DataMatrix can be generated (content: string)
+- DataMatrix can be read (content: string)
