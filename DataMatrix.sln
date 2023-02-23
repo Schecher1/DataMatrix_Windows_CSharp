@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMatrix_Console", "DataMatrix_Console\DataMatrix_Console.csproj", "{05EC51FC-928C-47FC-BD3A-7680D6308A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMatrix_Lib", "DataMatrix_Lib\DataMatrix_Lib.csproj", "{8D89DC0C-8775-4AAF-8D34-9AB270579DA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05EC51FC-928C-47FC-BD3A-7680D6308A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EC51FC-928C-47FC-BD3A-7680D6308A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EC51FC-928C-47FC-BD3A-7680D6308A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EC51FC-928C-47FC-BD3A-7680D6308A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D89DC0C-8775-4AAF-8D34-9AB270579DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D89DC0C-8775-4AAF-8D34-9AB270579DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D89DC0C-8775-4AAF-8D34-9AB270579DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D89DC0C-8775-4AAF-8D34-9AB270579DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14A3684E-1DCD-444D-BAA0-C4448EC185D5}
+	EndGlobalSection
+EndGlobal
