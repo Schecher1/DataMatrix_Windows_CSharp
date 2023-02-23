@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataMatrix_Lib\DataMatrix_Lib.csproj" />
+  </ItemGroup>
+
 </Project>
