@@ -7,7 +7,7 @@ namespace DataMatrix_Lib.Core
     {
         public Bitmap ConvertStringToDataMatrix(string value)
         {
-            string base64 = Converter.AsciiToBase64(value);
+            string base64 = Converter.StringToBase64(value);
             string binaryString = Converter.Base64ToBinary(base64);
 
             int length = binaryString.Length;
@@ -61,6 +61,18 @@ namespace DataMatrix_Lib.Core
         {
             Bitmap dataMatrix = new Bitmap(path);
             return ConvertDataMatrixToString(dataMatrix);
+        }
+
+        public void ConvertFileToDataMatrix(string savePath, string filePath)
+        {
+            string base64 = Converter.FileToBase64(filePath);
+            ConvertStringToDataMatrix(savePath, base64);
+        }
+
+        public void ConvertDataMatrixToFile(string savePath, string filePath)
+        {
+            string base64 = ConvertDataMatrixToString(filePath);
+            Converter.Base64ToFile(savePath, base64);
         }
     }
 }

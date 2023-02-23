@@ -24,6 +24,8 @@ namespace DataMatrix_Console
                 Console.WriteLine();
                 Console.WriteLine("1 => Convert String to DataMatrix");
                 Console.WriteLine("2 => Convert DataMatrix to String");
+                Console.WriteLine("3 => Convert File to DataMatrix");
+                Console.WriteLine("4 => Convert DataMatrix to File");
                 Console.WriteLine();
                 Console.WriteLine("q => Exit");
                 Console.WriteLine();
@@ -40,7 +42,15 @@ namespace DataMatrix_Console
                     case "2":
                         ConvertDataMatrixToString();
                         break;
-                        
+
+                    case "3":
+                        ConvertFileToDataMatrix();
+                        break;
+
+                    case "4":
+                        ConvertDataMatrixToFile();
+                        break;
+
                     case "q":
                         isRunning = false;
                         break;
@@ -84,6 +94,42 @@ namespace DataMatrix_Console
             Console.WriteLine("The value of the Datamatrix is: " + output);
 
             Console.ReadKey();
+        }
+
+        private void ConvertFileToDataMatrix()
+        {
+            string filePath, savePath;
+
+            Console.WriteLine();
+            Console.WriteLine("Please enter the path to save the DataMatrix");
+            Console.Write("Path: ");
+            savePath = Console.ReadLine();
+
+            Console.WriteLine();
+            Console.WriteLine("Please enter the path of that file");
+            Console.Write("Value: ");
+            filePath = Console.ReadLine();
+
+            DataMatrixCore _dmc = new DataMatrixCore();
+            _dmc.ConvertFileToDataMatrix(savePath, filePath);
+        }
+
+        private void ConvertDataMatrixToFile()
+        {
+            string filePath, savePath;
+
+            Console.WriteLine();
+            Console.WriteLine("Please enter the path of the DataMatrix");
+            Console.Write("Path: ");
+            filePath = Console.ReadLine();
+
+            Console.WriteLine();
+            Console.WriteLine("Please enter the path of that file");
+            Console.Write("Value: ");
+            savePath = Console.ReadLine();
+
+            DataMatrixCore _dmc = new DataMatrixCore();
+            _dmc.ConvertDataMatrixToFile(savePath, filePath);
         }
     }
 }

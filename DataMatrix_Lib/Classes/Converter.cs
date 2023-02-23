@@ -10,9 +10,9 @@ namespace DataMatrix_Lib.Classes
             return Encoding.UTF8.GetString(bytes);
         }
 
-        public static string AsciiToBase64(string ascii)
+        public static string FileToBase64(string path)
         {
-            byte[] bytes = Encoding.UTF8.GetBytes(ascii);
+            byte[] bytes = File.ReadAllBytes(path);
             return Convert.ToBase64String(bytes);
         }
 
@@ -45,6 +45,18 @@ namespace DataMatrix_Lib.Classes
             }
 
             return Encoding.ASCII.GetString(bytes);
+        }
+
+        internal static void Base64ToFile(string savePath, string base64)
+        {
+            byte[] bytes = Convert.FromBase64String(base64);
+            File.WriteAllBytes(savePath, bytes);
+        }
+
+        internal static string StringToBase64(string value)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(value);
+            return Convert.ToBase64String(bytes);
         }
     }
 }
