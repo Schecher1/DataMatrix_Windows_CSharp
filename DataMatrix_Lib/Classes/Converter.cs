@@ -32,11 +32,6 @@ namespace DataMatrix_Lib.Classes
 
             byte[] bytes = new byte[binary.Length / 8];
 
-            for (int i = 0; i < bytes.Length; i++)
-            {
-                Console.WriteLine((char)bytes[i]);
-            }
-
             for (int i = 0; i < binary.Length; i += 8)
             {
                 string byteString = binary.Substring(i, 8);
