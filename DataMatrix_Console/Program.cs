@@ -23,10 +23,10 @@ namespace DataMatrix_Console
                 Console.WriteLine("             DataMatrix Builder   |    Version 1.1.2.0   |  GitHub: Schecher1/DataMatrix_Windows_CSharp");
                 Console.WriteLine(MENU_LAYOUT);
                 Console.WriteLine();
-                Console.WriteLine("1 => Convert String to DataMatrix");
-                Console.WriteLine("2 => Convert DataMatrix to String");
-                Console.WriteLine("3 => Convert File to DataMatrix");
-                Console.WriteLine("4 => Convert DataMatrix to File");
+                Console.WriteLine("1 => Convert String to DataMatrix-Image");
+                Console.WriteLine("2 => Convert DataMatrix-Image to String");
+                Console.WriteLine("3 => Convert File to DataMatrix-Image");
+                Console.WriteLine("4 => Convert DataMatrix-Image to File");
                 Console.WriteLine();
 
                 Console.WriteLine();
@@ -37,19 +37,19 @@ namespace DataMatrix_Console
                 switch (choice)
                 {
                     case "1":
-                        ConvertStringToDataMatrix();
+                        ConvertStringToDataMatrixImage();
                         break;
                         
                     case "2":
-                        ConvertDataMatrixToString();
+                        ConvertDataMatrixImageToString();
                         break;
 
                     case "3":
-                        ConvertFileToDataMatrix();
+                        ConvertFileToDataMatrixImage();
                         break;
 
                     case "4":
-                        ConvertDataMatrixToFile();
+                        ConvertDataMatrixImageToFile();
                         break;
 
                     case "q":
@@ -78,7 +78,7 @@ namespace DataMatrix_Console
             return input;
         }
 
-        private void ConvertStringToDataMatrix()
+        private void ConvertStringToDataMatrixImage()
         {
             string path, value;
 
@@ -91,7 +91,7 @@ namespace DataMatrix_Console
 
 
 
-        private void ConvertDataMatrixToString()
+        private void ConvertDataMatrixImageToString()
         {
             string path;
             string output = string.Empty;
@@ -106,7 +106,7 @@ namespace DataMatrix_Console
             Console.ReadKey();
         }
 
-        private void ConvertFileToDataMatrix()
+        private void ConvertFileToDataMatrixImage()
         {
             string filePath, savePath;
 
@@ -117,7 +117,7 @@ namespace DataMatrix_Console
             try { _dmc.ConvertFileToDataMatrix(savePath, filePath); } catch (Exception ex) { ErrorManager.SendError(ex); }
         }
 
-        private void ConvertDataMatrixToFile()
+        private void ConvertDataMatrixImageToFile()
         {
             string filePath, savePath;
 
