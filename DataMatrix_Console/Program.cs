@@ -117,7 +117,13 @@ namespace DataMatrix_Console
             savePath = GetUserInput("Enter a path where the DataMatrix should be saved (please include the file name  + .png)", "Path: ");
 
             DataMatrixCore _dmc = new DataMatrixCore();
-            try { _dmc.ConvertFileToDataMatrix(savePath, filePath); } catch (Exception ex) { ErrorManager.SendError(ex); }
+            DateTime start = DateTime.Now;
+            //try { _dmc.ConvertFileToDataMatrix(savePath, filePath); } catch (Exception ex) { ErrorManager.SendError(ex); }
+            _dmc.ConvertFileToDataMatrix(savePath, filePath);
+            DateTime end = DateTime.Now;
+            Console.WriteLine("Time needed: " + (end - start).TotalMinutes + " minutes");
+            Console.WriteLine("Time needed: " + (end - start).TotalSeconds + " seconds");
+            Console.ReadKey();
         }
 
         private void ConvertDataMatrixImageToFile()
