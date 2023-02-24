@@ -59,6 +59,9 @@ namespace DataMatrix_Console
                     default:
                         break;
                 }
+
+                //just be on the safe side
+                GC.Collect();
             }
         }
 
