@@ -1,5 +1,5 @@
-﻿using DataMatrix_Lib.Core;
-using System.IO;
+﻿using DataMatrix_Lib.Classes;
+using DataMatrix_Lib.Core;
 
 namespace DataMatrix_Console
 {
@@ -20,7 +20,7 @@ namespace DataMatrix_Console
             {
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine("             DataMatrix Builder   |    Version 1.0.0.0   |  GitHub: Schecher1/DataMatrix_Windows_CSharp");
+                Console.WriteLine("             DataMatrix Builder   |    Version 1.1.2.0   |  GitHub: Schecher1/DataMatrix_Windows_CSharp");
                 Console.WriteLine(MENU_LAYOUT);
                 Console.WriteLine();
                 Console.WriteLine("1 => Convert String to DataMatrix");
@@ -28,7 +28,7 @@ namespace DataMatrix_Console
                 Console.WriteLine("3 => Convert File to DataMatrix");
                 Console.WriteLine("4 => Convert DataMatrix to File");
                 Console.WriteLine();
-                Console.WriteLine("q => Exit");
+
                 Console.WriteLine();
                 Console.WriteLine(MENU_LAYOUT);
                 Console.Write("Enter your choice: ");
@@ -86,17 +86,20 @@ namespace DataMatrix_Console
             value = GetUserInput("Enter your text, which should be converted to DataMatrix", "Text: ");
             
             DataMatrixCore _dmc = new DataMatrixCore();
-            _dmc.ConvertStringToDataMatrix(path, value);
+            try{ _dmc.ConvertStringToDataMatrix(path, value); } catch (Exception ex){ ErrorManager.SendError(ex); }
         }
+
+
 
         private void ConvertDataMatrixToString()
         {
             string path;
+            string output = string.Empty;
 
             path = GetUserInput("Enter the path to the DataMatrix (please include the file name + .png)", "Path: ");
 
             DataMatrixCore _dmc = new DataMatrixCore();
-            string output = _dmc.ConvertDataMatrixToString(path);
+            try { output = _dmc.ConvertDataMatrixToString(path); } catch (Exception ex) { ErrorManager.SendError(ex); }
 
             Console.WriteLine();
             Console.WriteLine("The value of the Datamatrix is: " + output);
@@ -107,11 +110,11 @@ namespace DataMatrix_Console
         {
             string filePath, savePath;
 
-            savePath = GetUserInput("Enter a path where the DataMatrix should be saved (please include the file name  + .png)", "Path: ");
             filePath = GetUserInput("Enter a path where the file that converted into a DataMatrix (please include the file name + extension)", "Path: ");
+            savePath = GetUserInput("Enter a path where the DataMatrix should be saved (please include the file name  + .png)", "Path: ");
 
             DataMatrixCore _dmc = new DataMatrixCore();
-            _dmc.ConvertFileToDataMatrix(savePath, filePath);
+            try { _dmc.ConvertFileToDataMatrix(savePath, filePath); } catch (Exception ex) { ErrorManager.SendError(ex); }
         }
 
         private void ConvertDataMatrixToFile()
@@ -122,7 +125,7 @@ namespace DataMatrix_Console
             savePath = GetUserInput("Enter a path where the file should be saved (please include the file name + extension)", "Path: ");
 
             DataMatrixCore _dmc = new DataMatrixCore();
-            _dmc.ConvertDataMatrixToFile(savePath, filePath);
+            try { _dmc.ConvertDataMatrixToFile(savePath, filePath); } catch (Exception ex) { ErrorManager.SendError(ex); }
         }
     }
 }

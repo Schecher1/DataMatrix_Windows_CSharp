@@ -40,6 +40,11 @@ namespace DataMatrix_Lib.Core
             {
                 for (int x = 0; x < dataMatrix.Width; x++)
                 {
+                    //debug
+#if DEBUG
+                    Console.WriteLine($"Height: {y} from {dataMatrix.Height} | Width: {x} from {dataMatrix.Width}");
+#endif
+                    
                     Color pixelColor = dataMatrix.GetPixel(x, y);
 
                     if (pixelColor == Color.FromArgb(255, 0, 0, 0))
