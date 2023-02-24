@@ -18,5 +18,8 @@ It's not as developed as much as his yet. But let's see how far I get.
 - DataMatrix can be generated (content: string)
 - DataMatrix can be read (content: string)
 
-## 1.0.1.0
-- DataMatrix can be generated (content: file)
+## 1.1.0.0
+- DataMatrix can be generated (content: file) (it's damn slow and inefficient)
+
+## 1.1.1.0
+- The console inputs are now handled better (expectation handling)
