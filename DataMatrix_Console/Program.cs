@@ -20,7 +20,7 @@ namespace DataMatrix_Console
             {
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine("             DataMatrix Builder   |    Version 1.1.2.0   |  GitHub: Schecher1/DataMatrix_Windows_CSharp");
+                Console.WriteLine("             DataMatrix Builder   |    Version 1.1.1.0   |  GitHub: Schecher1/DataMatrix_Windows_CSharp");
                 Console.WriteLine(MENU_LAYOUT);
                 Console.WriteLine();
                 Console.WriteLine("1 => Convert String to DataMatrix-Image");
