@@ -31,6 +31,9 @@ It's not as developed as much as his yet. But let's see how far I get.
 3. Finally, the base64 string is converted to a byte array and saved as a file.
 
 
+## And the same principle only backwards when converted to a DataMatrix!
+
+
 ## Features:
 
 ✔️ You can create a DataMatrix where the content is a string (DataMatrix grows dynamically, but don't know when it stops)<br/>
