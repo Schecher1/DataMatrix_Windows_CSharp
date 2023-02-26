@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using DataMatrix_Lib.Classes;
+using DataMatrix_Lib.v01.Classes;
 
-namespace DataMatrix_Lib.Core
+namespace DataMatrix_Lib.v01.Core
 {
     public class DataMatrixCore
     {
@@ -34,7 +34,7 @@ namespace DataMatrix_Lib.Core
 
         public string ConvertDataMatrixToString(Bitmap dataMatrix)
         {
-            string binaryString = String.Empty;
+            string binaryString = string.Empty;
 
             for (int y = 0; y < dataMatrix.Height; y++)
             {
@@ -44,7 +44,7 @@ namespace DataMatrix_Lib.Core
 #if DEBUG
                     Console.WriteLine($"Height: {y} from {dataMatrix.Height} | Width: {x} from {dataMatrix.Width}");
 #endif
-                    
+
                     Color pixelColor = dataMatrix.GetPixel(x, y);
 
                     if (pixelColor == Color.FromArgb(255, 0, 0, 0))

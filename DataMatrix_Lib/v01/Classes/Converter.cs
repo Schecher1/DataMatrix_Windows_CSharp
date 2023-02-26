@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace DataMatrix_Lib.Classes
+namespace DataMatrix_Lib.v01.Classes
 {
     public class Converter
     {
@@ -49,6 +49,12 @@ namespace DataMatrix_Lib.Classes
         }
 
         internal static string StringToBase64(string value)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(value);
+            return Convert.ToBase64String(bytes);
+        }
+
+        internal static string CharArrayToBase64(char[] value)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(value);
             return Convert.ToBase64String(bytes);

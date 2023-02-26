@@ -1,4 +1,4 @@
-﻿namespace DataMatrix_Lib.Classes
+﻿namespace DataMatrix_Lib.v02.Classes
 {
     public class ErrorManager
     {
