@@ -20,3 +20,13 @@ It's not as developed as much as his yet. But let's see how far I get.
 
 ## 1.0.1.0
 - DataMatrix can be generated (content: file)
+
+## 2.0.0.0
+- Libv02 added ( only File To DataMatrix until now ):
+  - Multi Threading
+  - More efficient
+  - Faster
+  - consumes much less ram
+  - more dynamically adjustable
+  - supports also very large files
+  - no XXL DataMatrixes are created but several small ones (will be summarized later as a video)
